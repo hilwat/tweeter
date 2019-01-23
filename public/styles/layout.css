@@ -27,9 +27,9 @@ body .container {
   width: 450px;
   background-color: #fff;
   margin: 0 auto;
-  height: 100%;
   padding-top: 50px;
   padding-bottom: 40px;
+  overflow-wrap: break-word;
 }
 
 article {
@@ -61,6 +61,27 @@ article footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+nav button{
+  margin: 0.8em;
+  font: 000;
+  float: right;
+  height: 3em;
+  width: 8em;
+  box-sizing: border-box;
+  border: 0.5px solid #E0E0E0;
+  border-radius: 4px;
+  background: #F5F5F5;
+  opacity: 0.5;
+}
+
+nav button:hover{
+  opacity: 1;
+}
+
+nav button{
+  font: inherit;
 }
 
 /*
