@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -18,6 +19,48 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
+  font-family: "Roboto Condensed", Sans-Serif;
+  height: 100%;
+}
+
+body .container {
+  width: 450px;
+  background-color: #fff;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+article {
+  width: 85%;
+  padding: 0px 0px 0px 0px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  border: 0.5px solid #E0E0E0;
+  border-radius: 4px;
+  background: #FFF;
+  position: relative;
+}
+
+article header {
+  background: #F5F5F5;
+  border: 0.5px solid #E0E0E0;
+  border-radius: 4px;
+}
+
+article body {
+  float: left;
+  margin: 20px;
+}
+
+article footer {
+  padding: 5px;
+  border: 0.5px solid #E0E0E0;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /*
