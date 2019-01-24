@@ -90,14 +90,15 @@ $(function(){
   event.preventDefault();
   let stringData = $(this).serialize();
   if(stringData.length <= 5){
-  alert("Please enter a tweet!");
+    return $('.charlengthlittle').toggle()
   } if(stringData.length >= 145 ){
-  alert("Your tweet is too long!");
+    return $('.charlengthmany').toggle()
+  } else{
+    $.ajax("/tweets", {data: stringData, method: 'POST'}).then(function(requestedstring){
+    loadTweets();
+      $('.new-tweet textarea').val('');
+    })
   }
-  $.ajax("/tweets", {data: stringData, method: 'POST'}).then(function(requestedstring){
-  loadTweets();
-    $('.new-tweet textarea').val('');
-  })
 })
 });
 
