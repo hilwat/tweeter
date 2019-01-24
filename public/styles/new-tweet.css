@@ -23,65 +23,7 @@ h2:after {
 }
 
 
-form textarea{
-  width: 100%;
-}
-
-form .counter {
-  float: right;
-}
-
-article{
-  min-height: 120px
-}
-
-body article header {
-  display: flex;
-  justify-content: space-between;
-}
-
-body article header:hover {
- opacity: 0.3;
-}
-
-body article footer {
-  position: bottom;
-}
-
-.old-tweet {
-
-}
-
-
-.avatar {
-  margin: 5px;
-  width: 40px;
-  height: 40px;
-}
-
-.handler {
-  padding-top: 27px;
-  vertical-align: bottom;
-  margin: 0px 3px 3px 0px;
-}
-
-.username {
-  display: inline-block;
-  margin: 0px 3px 3px 0px;
-}
-
-.icons {
-float: right;
-opacity: 0;
-}
-
-.icons:hover {
-display: inline-block;
-opacity: 1;
-color: #20b07c;
-
-}
-
+/* Error message ccs for validation on new tweets */
 .errormsg{
   color: red;
 }
@@ -93,3 +35,4 @@ color: #20b07c;
 .charlengthmany{
   display: none;
 }
+/* - */

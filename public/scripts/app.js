@@ -1,7 +1,5 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ * Client-side JS logic
  */
 
 $(document).ready(function() {
@@ -13,7 +11,7 @@ function renderTweets(tweets) {
 }
 //creates new tweets with the correct information
 
-
+//function to calculate the time
 function timeSince(date) {
 
   var seconds = Math.floor((new Date() - date) / 1000);
@@ -42,8 +40,9 @@ function timeSince(date) {
   return Math.floor(seconds) + " seconds";
 }
 
+//Creates a Tweet
   function createTweetElement(tweet){
-// date calculation for when the date was first created
+// references date function abobe
     var $days = timeSince(`${tweet.created_at}`)
     $('main.container .tweet-container').prepend(`
       <article>
@@ -54,9 +53,7 @@ function timeSince(date) {
         </div>
           <a class="handler">${tweet.user.handle}</a>
         </header>
-        <body>
         <a class="old-tweet">${tweet.content.text}</a>
-        </body>
         <footer>
           <a>${$days}</a>
           <span class="icons">
@@ -68,16 +65,27 @@ function timeSince(date) {
       </article>
       `);
 };
+
 // Blocks form submission - in case of too short or too long
+
 $(function(){
  $("form").submit(function(event){
+//prevents it from going through and hides error messages
   event.preventDefault();
-  let stringData = $(this).serialize();
-  if(stringData.length <= 5){
-    return $('.charlengthlittle').toggle()
-  } if(stringData.length >= 145 ){
-    return $('.charlengthmany').toggle()
-  } else{
+  $('.charlengthlittle, .charlengthmany').hide();
+
+  let tweettext = $('.new-tweet textarea').val();
+  let stringData = $(this).serialize()
+//no characters error
+  if(tweettext.length <= 0){
+    $('.charlengthlittle').toggle()
+  }
+//too many characters error
+  else if(tweettext.length > 140 ){
+    $('.charlengthmany').toggle()
+  }
+  else {
+//posting and clearing text space
     $.ajax("/tweets", {data: stringData, method: 'POST'}).then(function(requestedstring){
     loadTweets();
       $('.new-tweet textarea').val('');
@@ -87,7 +95,7 @@ $(function(){
 });
 
 
-// Compose button hide & show
+// Compose button hide & show with fancy slide at speed 400
 
 $('#composing-hideshow').on('click', function(){
   $('.new-tweet').slideToggle(400, function(){
@@ -95,19 +103,8 @@ $('#composing-hideshow').on('click', function(){
   })
 })
 
-// var input = document.getElementById('composing-hideshow');
-// var message = document.getElementsByClassName('compose')[0];
-// input.addEventListener('focus', function() {
-//     message.style.display = 'block';
-// });
-// input.addEventListener('focusout', function() {
-//     message.style.display = 'none';
-// });
 
-
-
-
- ///
+ //Leads the tweets
 function loadTweets(){
 $('.tweet-container').empty() //clears all
 $.ajax('/tweets', {method: 'GET'}).then(function(tweet){

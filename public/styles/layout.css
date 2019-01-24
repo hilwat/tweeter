@@ -27,8 +27,8 @@ body .container {
   width: 450px;
   background-color: #fff;
   margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   overflow-wrap: break-word;
 }
 
@@ -63,26 +63,74 @@ article footer {
   width: 100%;
 }
 
-nav button{
-  margin: 0.8em;
-  font: 000;
+form textarea{
+  width: 100%;
+}
+
+form .counter {
   float: right;
-  height: 3em;
-  width: 8em;
-  box-sizing: border-box;
-  border: 0.5px solid #E0E0E0;
-  border-radius: 4px;
-  background: #F5F5F5;
-  opacity: 0.5;
 }
 
-nav button:hover{
-  opacity: 1;
+article{
+  min-height: 150px
 }
 
-nav button{
-  font: inherit;
+body article header {
+  display: flex;
+  justify-content: space-between;
 }
+
+body article header:hover {
+ opacity: 0.3;
+}
+
+body article footer {
+  position: bottom;
+}
+
+
+.avatar {
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.handler {
+  padding-top: 27px;
+  vertical-align: bottom;
+  margin: 0px 3px 3px 0px;
+}
+
+.username {
+  display: inline-block;
+  margin: 0px 3px 3px 0px;
+}
+
+.icons {
+float: right;
+opacity: 0;
+}
+
+.icons:hover {
+display: inline-block;
+opacity: 1;
+color: #20b07c;
+
+}
+
+.errormsg{
+  color: red;
+}
+
+.charlengthlittle{
+  display: none;
+}
+
+.charlengthmany{
+  display: none;
+}
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
