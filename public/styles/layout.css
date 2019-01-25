@@ -75,19 +75,15 @@ article{
   min-height: 150px
 }
 
-body article header {
+header {
   display: flex;
   justify-content: space-between;
-}
-
-body article header:hover {
- opacity: 0.3;
+  opacity: 0.5;
 }
 
 body article footer {
   position: bottom;
 }
-
 
 .avatar {
   margin: 5px;
@@ -111,24 +107,19 @@ float: right;
 opacity: 0;
 }
 
-.icons:hover {
+/* upon hovering on the old tweet */
+.whole-tweet:hover .icons {
 display: inline-block;
 opacity: 1;
 color: #20b07c;
 
 }
 
-.errormsg{
-  color: red;
+.whole-tweet:hover header {
+ opacity: 1;
 }
 
-.charlengthlittle{
-  display: none;
-}
 
-.charlengthmany{
-  display: none;
-}
 
 
 

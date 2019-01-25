@@ -43,25 +43,25 @@
       <button id="composing-hideshow"><i class="fas fa-edit" ></i>Compose</button>
     </nav>
 
-    <!-- Page-specific (main) content here -->
+    <!-- -->
     <main class="container">
 
-<section class="new-tweet">
-  <div class=errormsg>
-     <p class=charlengthlittle>You have entered too little characters</p>
-     <p class=charlengthmany>You have entered too many characters</p>
-  </div>
-  <h2 class="compose">Compose Tweet</h2>
-    <form method="POST"action="/tweets/">
-    <textarea name="text" placeholder="What are you humming about?"></textarea>
-    <input type="submit" value="Tweet">
-    <span class="counter">140</span>
-  </form>
-</section>
-<section class='tweet-container'>
- <!-- Will append the old tweets here -->
-</section>
-    </main>
+      <section class="new-tweet">
+        <div class=errormsg>
+         <p class=charlengthlittle>You have entered too little characters</p>
+         <p class=charlengthmany>You have entered too many characters</p>
+       </div>
+       <h2 class="compose">Compose Tweet</h2>
+       <form method="POST"action="/tweets/">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
+    <section class='tweet-container'>
+     <!-- Will append the old tweets here -->
+   </section>
+ </main>
 
-  </body>
+</body>
 </html>
