@@ -5,7 +5,7 @@ Tweeter has features that are similar to twitter where comments can be posted an
 ## Final Product
 
 ![Welcome](Post-Tweet.png)
-![Tweet on Hover](Post-Tweet.png)
+![Tweet on Hover](Old-Tweet.png)
 
 ## Dependencies
 
